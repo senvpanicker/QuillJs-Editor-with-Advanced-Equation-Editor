@@ -1,0 +1,164 @@
+.quill-editor {
+  ::ng-deep .ql-snow {
+    .ql-formats {
+      margin-right: 0;
+      button {
+        padding: 4px;
+        margin: 1px;
+        &:hover {
+          background-color: rgb(222, 222, 222);
+        }
+      }
+    }
+    .special-character,
+    .mathlive {
+      position: relative;
+    }
+    .ql-size {
+      width: 75px;
+    }
+    .ql-undo,
+    .ql-redo,
+    .ql-specialchars,
+    .ql-mathlive {
+      overflow: hidden;
+      &:focus {
+        outline: 0;
+      }
+    }
+    .ql-specialchars,
+    .ql-mathlive {
+      width: 40px;
+      svg {
+        pointer-events: none;
+        display: inline;
+      }
+    }
+    .ql-charactertypes {
+      width: 100%;
+    }
+    .ql-picker {
+      &.ql-size,
+      &.ql-charactertypes {
+        .ql-picker-label,
+        .ql-picker-item {
+          &::before {
+            content: attr(data-value) !important;
+          }
+        }
+      }
+    }
+    .ql-editor {
+      font-size: 16px;
+      -webkit-user-select: text;
+    }
+
+    .special-character-dropdown-content {
+      position: absolute;
+      top: 22px;
+      right: 0px;
+      min-width: 275px;
+      min-height: 250px;
+      background-color: white;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border: 1px solid rgb(196, 196, 196);
+
+      &__header {
+        padding: 5px 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+        height: 30px;
+
+        &__left {
+          float: left;
+          width: 50%;
+          padding: 2px 5px;
+          height: 24px;
+          font-size: 13px;
+          font-weight: bold;
+        }
+
+        &__right {
+          float: right;
+          width: 50%;
+          z-index: 10;
+          overflow: visible;
+        }
+      }
+
+      &__body {
+        padding: 5px 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+        height: 190px;
+        padding: 3px 7px;
+        overflow: auto;
+
+        .character-item {
+          width: 24px;
+          height: 24px;
+          margin: 5px;
+          border-radius: 4px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover,
+          &:focus {
+            box-shadow: inset 0 0 0 1px white, 0 0 0 2px rgb(31, 137, 229);
+            outline: 0;
+          }
+
+          &:hover {
+            background-color: rgb(230, 230, 230);
+          }
+        }
+      }
+
+      &__footer {
+        padding: 5px 0;
+
+        &__left,
+        &__right {
+          padding: 5px;
+          font-size: 9.75px;
+          color: rgb(51, 51, 51);
+        }
+
+        &__left {
+          width: 75%;
+          float: left;
+        }
+
+        &__right {
+          width: 25%;
+          float: right;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.mathlive-editor {
+  position: absolute;
+  height: 50px;
+  width: 300px;
+  border: 1px solid black;
+  top: 22px;
+  right: 0px;
+  z-index: 1;
+  background-color: white;
+
+  .mathlive {
+    width: 250px;
+    height: 100%;
+    float: left;
+  }
+
+  .mathlive-ok-button {
+    width: 46px;
+    height: 96%;
+    border-left: 1px solid black;
+  }
+}

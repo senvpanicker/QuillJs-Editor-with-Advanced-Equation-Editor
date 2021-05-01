@@ -1,0 +1,14 @@
+.htmlOutputLabel {
+  margin-top: 10px;
+}
+
+.htmlOutput {
+  margin-top: 20px;
+  &__text {
+    height: 200px;
+    margin-top: 5px;
+    width: 100%;
+    background-color: lightgrey;
+    opacity: 0.8;
+  }
+}

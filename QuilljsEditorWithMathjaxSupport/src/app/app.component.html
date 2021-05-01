@@ -1,0 +1,15 @@
+<app-equation-editor
+  [maxCharacter]="maxChars"
+  [contentId]="contentId"
+  [content]="answerText"
+  (contentChanged)="setContent($event)"
+>
+</app-equation-editor>
+<div class="htmlOutput">
+  <label class="htmlOutputLabel" for="htmlOutput">Html</label>
+  <textarea
+    id="htmlOutput"
+    class="htmlOutput__text"
+    [(ngModel)]="content"
+  ></textarea>
+</div>
